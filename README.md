@@ -28,4 +28,4 @@
 To begin your adventure with Static, clone the repository:
 
 ```bash
-git clone https://github.com/your-username/static.git
+git clone https://github.com/Waves-Lab-Offical/static.git
