@@ -1,0 +1,23 @@
+{
+    "name": "static",
+    "version": "1.0.0",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Waves-Lab-Offical/static.git"
+    },
+    "keywords": [],
+    "author": "WavesLab",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Waves-Lab-Offical/static/issues"
+    },
+    "homepage": "https://github.com/Waves-Lab-Offical/static#readme",
+    "description": "",
+    "devDependencies": {
+        "electron": "^37.2.6"
+    }
+}
