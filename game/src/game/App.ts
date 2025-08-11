@@ -1,4 +1,4 @@
-import VirtualDocument from "../utils/Document";
+import StartScreen from "./components/StartScreen";
 import Listeners from "./Listeners/listener";
 
 /**
@@ -21,19 +21,6 @@ function Main(platform: string, main: HTMLDivElement, Cdocument: typeof document
 
     Cdocument.querySelector('title')!.innerHTML = Title;
 
-    const InitialPoint = `<div id="root"></div>`;
-
-    const RootMain = '#root';
-
-    const StartScreen = new VirtualDocument(InitialPoint, RootMain);
-
-    const button = StartScreen.createElement('button');
-
-    button.addClass('btn')
-    button.text('Click me!')
-
-    StartScreen.appendChild(button)
-
     // Check if the main exists
 
     if (!main) {
@@ -42,9 +29,9 @@ function Main(platform: string, main: HTMLDivElement, Cdocument: typeof document
 
     StartScreen.mount(main);
 
-    const lsnrs = new Listeners(document.querySelector('#root'))
+    const lsnrs = new Listeners(main)
 
-    lsnrs.StartScreen()
+    lsnrs.StartScreenListeners()
 }
 
 export default Main;

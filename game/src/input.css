@@ -1,1 +1,43 @@
 @import "tailwindcss";
+
+* {
+    user-select: none;
+}
+
+@font-face {
+    font-family: "Stat";
+    src: url("/fonts/stat_ft.ttf") format("truetype");
+    font-weight: 400;
+    /* regular / light variant */
+    font-style: normal;
+    font-display: swap;
+    /* recommended for web: avoids invisible text */
+    /* optional: unicode-range: U+000-5FF; */
+}
+
+@font-face {
+    font-family: "Stat";
+    src: url("/fonts/stat_hh.ttf") format("truetype");
+    font-weight: 700;
+    /* bold / heavy variant */
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Fallback stack and usage */
+:root {
+    --ui-font: "Stat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    font-family: var(--ui-font);
+    font-weight: 400;
+}
+
+/* Force the heavy file for headings */
+h1,
+h2,
+h3,
+.heavy {
+    font-weight: 700;
+}

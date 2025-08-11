@@ -18,7 +18,8 @@ export class VElement {
 
     // Add class(es)
     addClass(...classes: string[]): this {
-        this.el.classList.add(...classes);
+        const allClasses = classes.flatMap(c => c.split(/\s+/).filter(Boolean));
+        this.el.classList.add(...allClasses);
         return this;
     }
 
