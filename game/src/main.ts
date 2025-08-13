@@ -1,6 +1,11 @@
 import Main from './game/App';
 import './style.css';
 
+if (!localStorage.getItem('difficulty')) {
+    localStorage.setItem('difficulty', 'easy')
+    console.log('LocalStorage has no member \'difficulty\' resolving to \'easy\'')
+}
+
 const audio: any = document.getElementById('bg-audio');
 
 audio.volume = 0.3

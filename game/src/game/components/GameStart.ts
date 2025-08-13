@@ -1,23 +1,22 @@
 import VirtualDocument from "../../utils/Document";
 
 const InitialPoint = `
-<div 
-    id="root"
-    class="h-screen w-screen flex flex-col justify-center items-center text-center relative overflow-hidden"
->
-    <!-- Video background -->
-    <video 
-        autoplay 
-        loop 
-        muted 
-        playsinline 
-        class="absolute top-0 left-0 w-full h-full object-cover -z-10"
+    <div 
+        id="root"
+        class="h-screen w-screen flex flex-col justify-center items-center text-center relative overflow-hidden"
     >
-        <source src="/assets/bg.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</div>
-    `;
+        <video 
+            autoplay 
+            loop 
+            muted 
+            playsinline 
+            class="absolute top-0 left-0 w-full h-full object-cover -z-10"
+        >
+            <source src="/assets/bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+`;
 
 const RootMain = '#root';
 
@@ -25,7 +24,7 @@ const GameStart = new VirtualDocument(InitialPoint, RootMain)
 
 const TitleText = GameStart.createElement('h1')
 
-TitleText.addClass('text-white text-[50px]')
+TitleText.addClass('text-white text-[50px] mt-10')
 TitleText.text('Static Game Play')
 
 const ButtonStyle = {
@@ -64,7 +63,19 @@ const BackBtn = GameStart.createElement('button')
 BackBtn.addClass(`back-btn ${ButtonStyle['primary']}`)
 BackBtn.text('Go Back')
 
+const play = GameStart.createElement('button')
+
+play.addClass(`play-btn mt-6 ${ButtonStyle['secondary']}`)
+play.text('Play')
+
+const desc = GameStart.createElement('p')
+
+desc.addClass('text-white text-[25px]')
+desc.text(`Play Static in ${localStorage.getItem('difficulty') || 'Easy'} Difficulty.`)
+
 GameStart.appendChild(BackBtn)
 GameStart.appendChild(TitleText)
+GameStart.appendChild(desc)
+GameStart.appendChild(play)
 
 export default GameStart

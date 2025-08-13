@@ -1,22 +1,21 @@
 import VirtualDocument from "../../utils/Document";
 
 const InitialPoint = `
-<div 
-    id="root"
-    class="h-screen w-screen flex flex-col justify-center items-center text-center relative overflow-hidden"
->
-    <!-- Video background -->
-    <video 
-        autoplay 
-        loop 
-        muted 
-        playsinline 
-        class="absolute top-0 left-0 w-full h-full object-cover -z-10"
+    <div 
+        id="root"
+        class="h-screen w-screen flex flex-col justify-center items-center text-center relative overflow-hidden"
     >
-        <source src="/assets/bg.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</div>
+        <video 
+            autoplay 
+            loop 
+            muted 
+            playsinline 
+            class="absolute top-0 left-0 w-full h-full object-cover -z-10"
+        >
+            <source src="/assets/bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 `;
 
 const RootMain = '#root';

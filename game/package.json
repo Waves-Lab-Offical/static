@@ -14,5 +14,9 @@
     "tailwindcss": "^4.1.11",
     "typescript": "~5.8.3",
     "vite": "^7.1.0"
+  },
+  "dependencies": {
+    "gl-matrix": "^3.4.4",
+    "three": "^0.179.1"
   }
 }

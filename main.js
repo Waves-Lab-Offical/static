@@ -1,6 +1,6 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
-const os = require('os')
+const os = require('os');
 
 const IconExtension = {
     'darwin': '.icns',
@@ -31,13 +31,15 @@ class Game {
         this.window = new BrowserWindow({
             width: 1000,
             height: 600,
-            frame: false,
+            autoHideMenuBar: true,
             icon: OSNativeIconPath,
             webPreferences: {
                 preload: path.join(__dirname, 'preload.js'),
                 nodeIntegration: false,
                 contextIsolation: true,
-                devTools: this.isDev
+                devTools: this.isDev,
+                enableRemoteModule: false,
+                sandbox: true,
             }
         });
 
@@ -74,6 +76,10 @@ function MainGame() {
 
     ipcMain.handle('platform', () => {
         return os.platform()
+    })
+
+    ipcMain.handle('exit', () => {
+        return process.exit(0)
     })
 }
 

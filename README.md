@@ -6,7 +6,7 @@
 
 ## Overview
 
-**Static** is an exciting and immersive game built using cutting-edge technologies including Electron, TypeScript, C, and WebGL. Designed for seamless performance and stunning visuals, Static delivers a unique gaming experience right on your desktop.
+**Static** is an exciting and immersive game built using cutting-edge technologies including Electron, TypeScript, and WebGL. Designed for seamless performance and stunning visuals, Static delivers a unique gaming experience right on your desktop.
 
 ---
 
