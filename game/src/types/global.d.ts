@@ -5,6 +5,7 @@ declare global {
 		api: {
 			platform: () => Promise<string>;
 			exit: () => never;
+			isdev: () => boolean;
 		};
 	}
 }

@@ -1,10 +1,10 @@
 class Sound {
     private audio: HTMLAudioElement;
-    public path: string
+    public path: string;
 
     constructor(path: string, volume: number = 1) {
         this.audio = new Audio(path);
-        this.path = path
+        this.path = path;
         this.setVolume(volume);
     }
 
@@ -36,10 +36,15 @@ class Sound {
         this.audio.volume = Math.min(Math.max(volume, 0), 1);
     }
 
+    // Enable or disable looping
+    public loop(enable: boolean = true): void {
+        this.audio.loop = enable;
+    }
+
     // Check if audio is playing
     public isPlaying(): boolean {
         return !this.audio.paused && !this.audio.ended;
     }
 }
 
-export default Sound
+export default Sound;

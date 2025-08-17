@@ -9,6 +9,12 @@
     <link rel="preload" href="/fonts/stat_hh.ttf" as="font" type="font/ttf" crossorigin>
 </head>
 <body class="h-screen w-screen bg-[#000000]">
+    <div id="stats_menu">
+        <div><span id="pos_x">0</span></div>
+        <div><span id="pos_y">0</span></div>
+        <div><span id="pos_z">0</span></div>
+    </div>
+    <div id="health" style="z-index: -11;"></div>
     <audio id="bg-audio" src="/sounds/static.mp3" loop autoplay></audio>
     <div id="app" class="h-screen w-screen"></div>
     <script type="module" src="/src/main.ts"></script>

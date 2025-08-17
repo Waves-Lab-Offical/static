@@ -81,6 +81,10 @@ function MainGame() {
     ipcMain.handle('exit', () => {
         return process.exit(0)
     })
+
+    ipcMain.handle('isdev', () => {
+        return !app.isPackaged
+    })
 }
 
 MainGame();

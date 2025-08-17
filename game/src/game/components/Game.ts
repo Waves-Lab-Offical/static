@@ -1,7 +1,8 @@
 import VirtualDocument, { VElement } from "../../utils/Document";
 
 const InitialPoint: string = `
-    <div  id="root" class="bg-black h-screen w-screen flex flex-col justify-center items-center text-center relative overflow-hidden"></div>
+    <div  id="root" class="bg-black h-screen w-screen flex flex-col justify-center items-center text-center relative overflow-hidden">
+    </div>
 `;
 
 const RootMain: string = '#root';

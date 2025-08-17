@@ -21,33 +21,35 @@ class Listeners {
         const settingsBtn = document.querySelector('.settings-btn');
 
         startBtn?.addEventListener('click', (): void => {
-            GameStart.mount(this.mount)
+            GameStart.mount(this.mount);
 
             const playBtn: HTMLElement = document.querySelector('.play-btn')
 
             const backBtn: HTMLElement = document.querySelector('.back-btn');
 
             backBtn?.addEventListener('click', (): void => {
-                window.location.reload()
-            })
+                window.location.reload();
+            });
 
             playBtn?.addEventListener('click', async (): Promise<void> => {
                 if (window.confirm('WARNING: CONTENT DISCLAIMER\n\nThis game contains intense horror themes, including graphic violence, blood, and disturbing imagery. It may not be suitable for all players, especially those sensitive to such content. Player discretion is strongly advised.\nBy continuing, you acknowledge that you understand and accept the mature and potentially unsettling nature of this experience.')) {
-                    Game.mount(this.mount)
+                    Game.mount(this.mount);
 
-                    this.GameListen()
+                    this.GameListen();
+
+                    localStorage.setItem('days', '5');
                 } else {
                     if (window.confirm('Do you want to exit')) {
-                        window.api.exit()
+                        window.api.exit();
                     } else {
-                        return
+                        return;
                     }
                 }
-            })
-        })
+            });
+        });
 
         settingsBtn?.addEventListener('click', (): void => {
-            Settings.mount(this.mount)
+            Settings.mount(this.mount);
 
             const selectEl = document.querySelector('select') as HTMLSelectElement;
             if (selectEl) {
@@ -67,9 +69,9 @@ class Listeners {
 
             backBtn?.addEventListener('click', (): void => {
                 window.location.reload()
-            })
-        })
+            });
+        });
     }
 }
 
-export default Listeners
+export default Listeners;
