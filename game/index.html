@@ -4,19 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Static</title>
-    <link rel="preload" href="/fonts/stat_ft.ttf" as="font" type="font/ttf" crossorigin>
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval';">
-    <link rel="preload" href="/fonts/stat_hh.ttf" as="font" type="font/ttf" crossorigin>
 </head>
-<body class="h-screen w-screen bg-[#000000]">
-    <div id="stats_menu">
-        <div><span id="pos_x">0</span></div>
-        <div><span id="pos_y">0</span></div>
-        <div><span id="pos_z">0</span></div>
+<body>
+    <div class="home-screen">
+        <video autoplay muted loop>
+            <source src="/assets/bg.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="overlay"></div>
+        <h1>STATIC</h1>
+        <div class="play-button">PLAY</div>
     </div>
-    <div id="health" style="z-index: -11;"></div>
-    <audio id="bg-audio" src="/sounds/static.mp3" loop autoplay></audio>
-    <div id="app" class="h-screen w-screen"></div>
+    <canvas></canvas>
     <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
